@@ -4,11 +4,11 @@ const tree = document.querySelector('.tree');
 const allTreeChild = [];
 const allSiblings = [];
 
-if (tree.children) {
+if (tree && tree.children) {
   for (const child of tree.children) {
     allTreeChild.push(child);
 
-    if (child.querySelector('ul').children) {
+    if (child.querySelector('ul') && child.querySelector('ul').children) {
       for (const sibling of child.querySelector('ul').children) {
         allSiblings.push(sibling);
       }
